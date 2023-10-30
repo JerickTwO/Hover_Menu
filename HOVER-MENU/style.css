@@ -19,7 +19,7 @@ img{
     transition: transform 0.5s ease-in-out;
     padding: 20px;
 }
-.container-nombre{
+.container-name{
     position: absolute;
     background-color: #000;
     border-radius: 5px;
@@ -36,23 +36,23 @@ img{
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto;
-    width: 150px;/*cuando sale de estos pixeles*/
+    width: 150px;
     text-align: center;
     box-sizing: border-box;
 }
-.container-img:hover > .container-nombre{
+.container-img:hover > .container-name{
     display: inline-block;
     transform: translateY(-20px);
 
 }
-.container-nombre::before{
+.container-name::before{
     content: "";
     position: absolute;
     width: 1px;
     height: 1px;
     left: 40%;
     bottom: -20px;
-    border-top: 10px solid  #000;/*FLECHITA DE CONTENEDOR DE TEXTO*/
+    border-top: 10px solid  #000;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid transparent;
