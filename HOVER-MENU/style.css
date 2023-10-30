@@ -1,0 +1,82 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background-color: #BBDEFB;
+}
+.container-h1{
+    background-color: #fff;
+}
+h1{
+    text-align: center;
+    font-family: 'Yeseva One', serif;
+    font-size: 60px;
+    height: 100vh;
+    justify-content: center;
+}
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 180vh;
+}
+.container-img{
+    position: relative;    
+    display: inline-flex;
+    margin-bottom:-10px ;
+}
+img{
+    width: 140px;
+    height: 480px;
+    transition: transform 0.5s ease-in-out;
+    padding: 20px;
+}
+.container-nombre{
+    position: absolute;
+    background-color: #000;
+    border-radius: 5px;
+    color: #fff;
+    display: none;
+    min-width: 100px;
+    width: 150px;
+    top: -70px;
+    padding: 10px 15px;
+}
+.text{
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    width: 150px;/*cuando sale de estos pixeles*/
+    text-align: center;
+    box-sizing: border-box;
+}
+.container-img:hover > .container-nombre{
+    display: inline-block;
+    transform: translateY(-20px);
+
+}
+.container-nombre::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: 40%;
+    bottom: -20px;
+    border-top: 10px solid  #000;/*FLECHITA DE CONTENEDOR DE TEXTO*/
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+.container-img:hover img{
+    transform: translateY(-20px);
+}
+
+@media (max-width: 680px){
+    .container{
+        flex-direction: column;
+        height: 100%;
+    }
+    .container-img{
+        margin: 65px;
+    }
+}
