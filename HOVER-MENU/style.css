@@ -1,25 +1,34 @@
-body{
+/* Global styles */
+body {
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     background-color: #BBDEFB;
 }
-.container{
-    display:flex;
+
+/* Main container */
+.container {
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 180vh;
 }
-.container-img{
-    position: relative;    
+
+/* Container for each image and name */
+.container-img {
+    position: relative;
     display: inline-flex;
-    margin-bottom:-10px ;
+    margin-bottom: -10px;
 }
-img{
+
+/* Image styles */
+img {
     width: 140px;
     height: 480px;
     transition: transform 0.5s ease-in-out;
     padding: 20px;
 }
-.container-name{
+
+/* Container for the name */
+.container-name {
     position: absolute;
     background-color: #000;
     border-radius: 5px;
@@ -30,7 +39,9 @@ img{
     top: -70px;
     padding: 10px 15px;
 }
-.text{
+
+/* Text styles for the name */
+.text {
     display: inline-block;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -40,12 +51,15 @@ img{
     text-align: center;
     box-sizing: border-box;
 }
-.container-img:hover > .container-name{
+
+/* Display the name on hover */
+.container-img:hover > .container-name {
     display: inline-block;
     transform: translateY(-20px);
-
 }
-.container-name::before{
+
+/* Triangle under the name */
+.container-name::before {
     content: "";
     position: absolute;
     width: 1px;
@@ -57,16 +71,21 @@ img{
     border-right: 10px solid transparent;
     border-bottom: 10px solid transparent;
 }
-.container-img:hover img{
+
+/* Transform the image on hover */
+.container-img:hover img {
     transform: translateY(-20px);
 }
 
-@media (max-width: 680px){
-    .container{
+/* Styles for smaller screens */
+@media (max-width: 680px) {
+    .container {
         flex-direction: column;
         height: 100%;
     }
-    .container-img{
+
+    .container-img {
         margin: 65px;
     }
 }
+
