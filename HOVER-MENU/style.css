@@ -1,34 +1,29 @@
-/* Global styles */
-body {
+body{
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     background-color: #BBDEFB;
 }
 
-/* Main container */
-.container {
+.container{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 180vh;
+    justify-content: center; /* Centrar en el eje x */
+    align-items: center; /* Centrar en el eje y */
+    width: 100vw; /* Ajustar al ancho de la ventana */
+    height: 100vh; /* Ajustar a la altura de la ventana */
 }
-
-/* Container for each image and name */
-.container-img {
-    position: relative;
-    display: inline-flex;
-    margin-bottom: -10px;
-}
-
-/* Image styles */
-img {
-    width: 140px;
-    height: 480px;
-    transition: transform 0.5s ease-in-out;
+img{
+    height: 250px;
     padding: 20px;
+    transition: transform 0.5s ease-in-out;
 }
-
-/* Container for the name */
-.container-name {
+.container-img{
+    position: relative;
+    display: inline-block;
+}
+.container-img:hover img{
+    transform: translateY(-20px);
+    cursor: pointer;
+}
+.container-nombre{
     position: absolute;
     background-color: #000;
     border-radius: 5px;
@@ -36,12 +31,11 @@ img {
     display: none;
     min-width: 100px;
     width: 150px;
-    top: -70px;
+    top: -60px;
+    left: -5px;
     padding: 10px 15px;
 }
-
-/* Text styles for the name */
-.text {
+.text{
     display: inline-block;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -51,15 +45,11 @@ img {
     text-align: center;
     box-sizing: border-box;
 }
-
-/* Display the name on hover */
-.container-img:hover > .container-name {
+.container-img:hover > .container-nombre{
     display: inline-block;
     transform: translateY(-20px);
 }
-
-/* Triangle under the name */
-.container-name::before {
+.container-nombre::before{
     content: "";
     position: absolute;
     width: 1px;
@@ -72,20 +62,12 @@ img {
     border-bottom: 10px solid transparent;
 }
 
-/* Transform the image on hover */
-.container-img:hover img {
-    transform: translateY(-20px);
-}
-
-/* Styles for smaller screens */
-@media (max-width: 680px) {
-    .container {
+@media (max-width: 680px){
+    .container{
         flex-direction: column;
         height: 100%;
     }
-
-    .container-img {
+    .container-img{
         margin: 65px;
     }
 }
-
